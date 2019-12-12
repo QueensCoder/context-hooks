@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Booklist } from "./components";
+import { Navbar, Booklist, ThemeToggle } from "./components";
 import ThemeContextProvider from "./context/ThemeContext";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <ThemeContextProvider>
         <Navbar />
         <Booklist />
+        <ThemeToggle />
       </ThemeContextProvider>
     </div>
   );
