@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navbar = () => {
+  const theme = useContext(ThemeContext);
+  console.log(theme, "<><><>");
   return (
     <nav>
       <h1>Context App</h1>

@@ -1,11 +1,14 @@
 import React from "react";
 import { Navbar, Booklist } from "./components";
+import ThemeContextProvider from "./context/ThemeContext";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Booklist />
+      <ThemeContextProvider>
+        <Navbar />
+        <Booklist />
+      </ThemeContextProvider>
     </div>
   );
 }
