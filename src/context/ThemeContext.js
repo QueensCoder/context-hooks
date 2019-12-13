@@ -9,6 +9,7 @@ class ThemeContextProvider extends Component {
     dark: { syntax: "#ddd", ui: "#333", bg: "#555" }
   };
 
+  // toggle theme is passed down context
   toggleTheme = () => {
     this.setState({ isLightTheme: !this.state.isLightTheme });
   };
