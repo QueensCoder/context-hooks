@@ -1,6 +1,8 @@
 import React, { createContext, useState } from "react";
-export const BookContext = createContext();
-console.log(BookContext.Provider, "<><<><><>");
+export const BooksContext = createContext();
+
+console.log(BooksContext.Provider, "<><<><><>");
+
 const BooksContextProvider = ({ children }) => {
   const [books, setBooks] = useState([
     { title: "the art of war", id: 1 },
@@ -8,7 +10,9 @@ const BooksContextProvider = ({ children }) => {
     { title: "goosebumps", id: 3 }
   ]);
   return (
-    <BookContext.Provider value={{ books }}>{children}</BookContext.Provider>
+    <BooksContext.Provider value={{ books, setBooks }}>
+      {children}
+    </BooksContext.Provider>
   );
 };
 
